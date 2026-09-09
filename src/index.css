@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+:root {
+  --bg: rgb(40, 40, 50);
+
+  --color: silver;
+}
+
+* {
+  font-family: sans-serif;
+
+  color: var(--color);
+}
+
+body {
+  min-height: 100dvh;
+
+  background-color: var(--bg);
+
+  display: flex;
+  flex-direction: column;
+}
