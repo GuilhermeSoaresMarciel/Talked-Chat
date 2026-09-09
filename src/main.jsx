@@ -16,14 +16,20 @@ createRoot(document.querySelector("body")).render(
     </header>
 
     <main>
-      <div className="obj_chat">
+      <div className="obj_chat" id="obj_chat">
         <Message m_text="Hello, I am Talked Chat, how are you?" />
       </div>
 
       <div className="obj_input">
-        <input type="text" placeholder="Write Hore" />
+        <input type="text" placeholder="Write Here" id="textHere" />
 
-        <button>Send</button>
+        <button
+          onClick={() => {
+            const content = document.querySelector("#textHere").value;
+          }}
+        >
+          Send
+        </button>
       </div>
     </main>
 
