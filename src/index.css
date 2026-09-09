@@ -1,22 +1,132 @@
 @import "tailwindcss";
 
 :root {
-  --bg: rgb(40, 40, 50);
+  --bg-v1: rgb(40, 40, 50);
+  --bg-v2: rgb(40, 70, 100);
+  --bg-light: silver;
 
-  --color: silver;
+  --bg-main: linear-gradient(var(--bg-v1), var(--bg-v2), var(--bg-v1));
+
+  --color-light: silver;
+  --color-dark: rgb(40, 40, 50);
+
+  --value: 5px;
 }
 
 * {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
   font-family: sans-serif;
 
-  color: var(--color);
+  color: var(--color-light);
 }
 
 body {
   min-height: 100dvh;
 
-  background-color: var(--bg);
+  background: var(--bg-main);
 
   display: flex;
   flex-direction: column;
+}
+
+header,
+.obj_input,
+footer {
+  background-color: var(--bg-v2);
+
+  border-radius: var(--value);
+}
+
+header {
+  padding: var(--value);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header > img {
+  width: 50px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+
+  padding: var(--value);
+}
+
+.obj_chat {
+  flex: 1;
+}
+
+.obj_input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: var(--value);
+
+  gap: var(--value);
+}
+
+.obj_input > input {
+  flex: 1;
+
+  padding: var(--value);
+
+  background-color: var(--bg-light);
+
+  border-radius: var(--value);
+
+  color: var(--color-dark);
+
+  outline: none;
+}
+
+.obj_input > button {
+  background-color: var(--bg-v1);
+
+  padding: var(--value) calc(var(--value) * 4);
+
+  border-radius: var(--value);
+}
+
+.obj_input > button:hover {
+  transform: scale(0.9);
+}
+
+footer {
+  padding: var(--value);
+
+  text-align: center;
+}
+
+.Message {
+  background-color: var(--bg-v1);
+
+  padding: var(--value);
+
+  text-align: center;
+
+  border-radius: var(--value);
+}
+
+::-webkit-scrollbar {
+  width: var(--value);
+  height: var(--value);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bg-v1);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--bg-v2);
 }

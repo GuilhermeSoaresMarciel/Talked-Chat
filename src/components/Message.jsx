@@ -1,5 +1,9 @@
-function Message({m_text}) {
-  return <p>{m_text}</p>;
+function Message({ m_text }) {
+  return (
+    <div className="Message">
+      <p>{m_text}</p>
+    </div>
+  );
 }
 
 export default Message;
