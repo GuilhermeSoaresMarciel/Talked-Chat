@@ -5,6 +5,20 @@ import "./index.css";
 
 import Message from "./components/Message.jsx";
 
+function showMessage(m_text) {
+  const element_main = document.createElement("p");
+
+  element_main.className = "showMessage";
+
+  element_main.textContent = m_text;
+
+  setTimeout(() => {
+    element_main.remove();
+  }, 3000);
+
+  document.body.appendChild(element_main);
+}
+
 createRoot(document.querySelector("body")).render(
   <StrictMode>
     <header>
@@ -20,7 +34,17 @@ createRoot(document.querySelector("body")).render(
       <div className="obj_input">
         <input type="text" placeholder="Write Here" id="textHere" />
 
-        <button type="submit">Send</button>
+        <button
+          onClick={() => {
+            const m_fild = document.querySelector("#textHere").value;
+
+            if (m_fild == "") {
+              showMessage("empty field");
+            }
+          }}
+        >
+          Send
+        </button>
       </div>
     </main>
 

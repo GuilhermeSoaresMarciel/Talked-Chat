@@ -11,6 +11,8 @@
   --color-dark: rgb(40, 40, 50);
 
   --value: 5px;
+
+  --an_time: 2.5s;
 }
 
 * {
@@ -118,6 +120,25 @@ footer {
   border-radius: var(--value);
 }
 
+.showMessage {
+  position: fixed;
+
+  left: 50%;
+  bottom: var(--value);
+
+  transform: translateX(-50%);
+
+  background: var(--bg-main);
+
+  padding: var(--value);
+
+  text-align: center;
+
+  border-radius: var(--value);
+
+  animation: an-opacity var(--an_time) linear;
+}
+
 ::-webkit-scrollbar {
   width: var(--value);
   height: var(--value);
@@ -129,4 +150,14 @@ footer {
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--bg-v2);
+}
+
+@keyframes an-opacity {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
