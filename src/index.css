@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-:root {
+/* :root {
   --bg-v1: rgb(40, 40, 50);
   --bg-v2: rgb(40, 70, 100);
   --bg-light: silver;
@@ -104,6 +104,19 @@ main {
   transform: scale(0.9);
 }
 
+.obj_input > button:disabled {
+  cursor: not-allowed;
+  background-color: rgb(130, 130, 130);
+}
+
+.obj_input > #btnClearMessages {
+  background-color: rgb(255, 18, 18);
+}
+
+.obj_input > #btnClearMessages:disabled {
+  background-color: rgb(251, 109, 109);
+}
+
 footer {
   padding: var(--value);
 
@@ -111,13 +124,30 @@ footer {
 }
 
 .Message {
-  background-color: var(--bg-v1);
-
   padding: var(--value);
-
   text-align: center;
-
   border-radius: var(--value);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.Message .MessageContent {
+  background-color: var(--bg-v1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.Message .MessageContent button {
+  background-color: rgb(255, 18, 18);
+  border-radius: 50%;
+  font-weight: bold;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  font-size: 10px;
 }
 
 .showMessage {
@@ -160,4 +190,4 @@ footer {
   to {
     opacity: 1;
   }
-}
+} */
